@@ -1,0 +1,146 @@
+:root{
+    --body-bg: purple;
+    --hamberger-bg: pink;
+}
+
+html, body{
+    height: 100%;
+
+}
+
+.hight_bar{
+    position: relative;
+    bottom: 30px;
+    border-radius: 10px;
+    height: 70px;
+    width: 100%;
+    background-color: white;
+}
+
+body{
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hamberger-title{
+    color: white;
+    font-size: 18px;
+    padding-bottom: 10px;
+
+}
+
+.hamberger-container{
+    padding-left: 95%;
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: white;
+}
+
+.hamberger,
+.hamberger::before,
+.hamberger::after{
+    position: absolute;
+    width: 50px;
+    height: 10px;
+    transition: 0.5s;
+    background: var(--hamberger-bg);
+}
+
+
+.hamberger::before,
+.hamberger::after{
+    content: "";
+}
+
+.hamberger{
+    top: 50%;
+}
+.hamberger::before{
+    top: -20px;
+}
+.hamberger::after{
+    top: 20px;
+}
+.toggle:checked ~ .hamberger::after{
+    top: 0;
+    transform: rotate(225deg);
+}
+.toggle:checked ~ .hamberger::before{
+    top: 0;
+    transform: rotate(135deg);
+}
+.toggle:checked ~ .hamberger{
+    background: white;
+}
+.toggle{
+    opacity: 0;
+}
+
+
+
+header{
+    width: 500px;
+    height: 400px;
+    background-color: red;
+    background-image: url("elon.jpg");
+
+}
+
+main{
+    width: 500px;
+    height: 250px;
+    background-color: white;
+}
+
+
+footer{
+    width: 500px;
+    height: 150px;
+    background-color: white;
+}
+
+
+
+/* img{
+    height: 200px;
+    border: 3px solid black;
+    border-radius:200px;
+    position: relative;
+    top: 300px;    
+
+} */
+
+button{
+    border-radius: 30px;
+    border: 0px;
+    transition: transform 1s ease-in-out;
+}
+
+h1{
+    padding-top: 100px;
+    margin-top: 0px;
+}
+
+.circle{
+    height: 200px;
+    width: 200px;
+    border: 1px;
+    border-radius: 100px;
+    background-color: black;
+    background-image: url('차은우.jpg');
+    position: relative;
+    top: 250px;
+    transition: transform 1s ease-in-out;
+}
+
+.circle:hover{
+    transform: scale(1.3);
+}
+
+button:active{
+    transform: scale(1.3);
+}
